@@ -1,0 +1,50 @@
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <title>JavaScriptで画像クリックにより発動される処理を実装する方法</title>
+   <style type="text/css">
+     html {
+       font-size: 25%;
+       text-align: center;
+     }
+     h1 {
+       font-size: 4rem;
+     }
+     img {
+       float:left;
+       max-width: 32%;
+       width: 32%;
+       cursor: pointer;
+       margin-right:2%;
+       border:2px solid #eee;
+       box-sizing:border-box;
+     }
+   </style>
+ </head>
+
+
+<body>
+	<dialog id="dialog">
+	<p>
+		<img src="img/たまご.png" onclick="imgwin('たまご.png')" /> 
+		<img src="img/フリー　さかな.png" onclick="imgwin('フリー　さかな.png')" /> 
+		<img src="img/フリー　しめじ.png" onclick="imgwin('フリー　しめじ.png')" /> 
+		<img src="img/フリー　ソース.png" onclick="imgwin('フリー　ソース.png')" />
+	</p>
+	<script type="text/javascript">
+		function imgwin(img) {
+			window.open("img/" + img, "imgwindow", "width=866,height=580");
+		}
+	</script>
+
+	<p>ダイアログが表示されました！</p>
+	<button type="button"
+		onclick="document.getElementById('dialog').close();">ダイアログを閉じる</button>
+	</dialog>
+
+	<button type="button"
+		onclick="document.getElementById('dialog').show();">
+		ボタンを押すとダイアログを表示</button>
+</body>
+</html>
+
