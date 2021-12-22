@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class OUBO
+ * Servlet implementation class 
  */
 @WebServlet(urlPatterns = { "/insertanddelete" })
 public class insertanddelete extends HttpServlet {
@@ -59,7 +59,7 @@ public class insertanddelete extends HttpServlet {
 
 			while (result.next() == true) {
 
-				String[] s = new String[3];
+				String[] s = new String[4];
 				s[0] = result.getString(iconNo);
 				s[1] = result.getString(foodName);
 				s[2] = result.getString(expryDate);
